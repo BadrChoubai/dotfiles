@@ -1,6 +1,6 @@
 # To make it so Homebrew can handle Brewfiles:
 #   `brew tap Homebrew/bundle`
-#   `brew bundle --file=~/.dotfiles/homebrew/.Brewfile`
+#   `brew bundle --file=~/dotfiles/homebrew/Brewfile`
 
 # Install homebrew packages
 brew 'bat'
@@ -10,8 +10,9 @@ brew 'tree'
 brew 'tmux'
 
 # install homebrew casks
-brew cask install alacritty
-brew cask install firefox
+tap 'homebrew/cask'
+cask 'alacritty'
+cask 'firefox'
 
 # Ruby
 # Use [RVM](http://rvm.io/) instead of Homebrew.
