@@ -1,0 +1,22 @@
+# To make it so Homebrew can handle Brewfiles:
+#   `brew tap Homebrew/bundle`
+#   `brew bundle --file=~/.dotfiles/homebrew/.Brewfile`
+
+# Install homebrew packages
+brew 'bat'
+brew 'git'
+brew 'stow'
+brew 'tree'
+brew 'tmux'
+
+# install homebrew casks
+brew cask install alacritty
+brew cask install firefox
+
+# Ruby
+# Use [RVM](http://rvm.io/) instead of Homebrew.
+
+# Node
+# Use [`nvm`](https://github.com/creationix/nvm) instead of Homebrew.
+# Install manually using git clone rather than the install script:
+# https://github.com/creationix/nvm#manual-install
