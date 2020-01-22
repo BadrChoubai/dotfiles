@@ -5,6 +5,7 @@
 # Install homebrew packages
 brew 'bat'
 brew 'git'
+brew 'gpg2'
 brew 'stow'
 brew 'tree'
 brew 'tmux'
