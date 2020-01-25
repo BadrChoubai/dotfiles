@@ -13,7 +13,9 @@ brew 'tmux'
 
 # install homebrew casks
 tap 'homebrew/cask'
+
 cask 'alacritty'
+cask 'docker'
 cask 'firefox'
 cask 'paw'
 cask 'visual-studio-code'
