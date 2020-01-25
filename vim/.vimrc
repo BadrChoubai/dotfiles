@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/syntastic'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
+	Plug 'preservim/nerdtree'
 	Plug 'tpope/vim-fugitive'
 	
 call plug#end()
@@ -120,3 +121,9 @@ set ignorecase
 set smartcase
 set gdefault
 
+" =============================================================================
+" # NERDTree Settings 
+" =============================================================================
+"
+
+let g:NERDTreeWinPos = "right"
