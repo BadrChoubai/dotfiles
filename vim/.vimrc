@@ -17,12 +17,13 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-rails'
 	Plug 'pangloss/vim-javascript'
+	Plug 'mxw/vim-jsx'
 	Plug 'scrooloose/syntastic'
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
 	Plug 'preservim/nerdtree'
 	Plug 'tpope/vim-fugitive'
-	
+
 call plug#end()
 
 " =============================================================================

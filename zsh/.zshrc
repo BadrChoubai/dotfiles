@@ -24,5 +24,6 @@ antigen theme robbyrussell
 antigen apply
 
 export PROMPT="%~ :: "
+export DO_NOT_TRACK=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
