@@ -1,7 +1,7 @@
 syntax on
 set number
 syntax enable
-colorscheme monokai
+colorscheme base16-monokai
 
 if empty(glob('~/.vim/autoload/plug.vim'))
 	  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -10,12 +10,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-	" Use release branch (Recommend)
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'neoclide/coc-vetur'
+	Plug 'chriskempson/base16-vim'
 	Plug 'vim-airline/vim-airline'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-rails'
+	Plug 'posva/vim-vue'
 	Plug 'pangloss/vim-javascript'
 	Plug 'mxw/vim-jsx'
 	Plug 'scrooloose/syntastic'
@@ -23,6 +24,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf.vim'
 	Plug 'preservim/nerdtree'
 	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-markdown'
+    Plug 'reedes/vim-pencil'
 
 call plug#end()
 
@@ -104,9 +107,9 @@ set undodir=~/.vimdid
 set undofile
 
 " Use wide tabs
-set shiftwidth=8
-set softtabstop=8
-set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set noexpandtab
 
 " Wrapping options
