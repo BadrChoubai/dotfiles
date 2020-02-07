@@ -35,3 +35,16 @@ colors:
 
 draw_bold_text_with_bright_colors: false
 
+# Startup Mode 
+
+startup_mode: Fullscreen 
+
+# Scroll settings
+
+history: 300
+
+# Cursor Style
+
+cursor:
+    style: Beam
+    
