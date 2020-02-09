@@ -43,8 +43,3 @@ startup_mode: Fullscreen
 
 history: 300
 
-# Cursor Style
-
-cursor:
-    style: Beam
-    
