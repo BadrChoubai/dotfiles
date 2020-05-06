@@ -57,19 +57,10 @@ window:
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 10000
+  history: 300
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
-
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number of lines the terminal
-  # should scroll when the alternate screen buffer is active. This is used
-  # to allow mouse scrolling for applications like `man`.
-  #
-  # Specifying `0` will disable faux scrolling.
   multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
@@ -122,7 +113,7 @@ font:
     #style: Italic
 
   # Point size
-  size: 18.0
+  size: 20.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -192,13 +183,3 @@ colors:
 
 draw_bold_text_with_bright_colors: false
 
-# Point Size
-size: 13.0
-
-# Scroll settings
-
-history: 300
-
-# Startup Mode 
-
-startup_mode: Fullscreen 
