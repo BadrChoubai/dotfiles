@@ -11,7 +11,6 @@ case "$OSTYPE" in
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 		# Add homebrew to PATH
 		export PATH="/usr/local/sbin:$PATH"
-
 		;;	
 esac
 
@@ -27,3 +26,15 @@ export PROMPT="%~ :: "
 export DO_NOT_TRACK=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Read markdown in terminal
+rmd() {
+	pandoc $1 | lynx -stdin
+}
+
+# Add Python to PATH
+export PATH=$PATH:/Users/badrchoubai/Library/Python/3.7/bin/
+
+# aliases
+alias python=python3 
+alias pip=pip3
