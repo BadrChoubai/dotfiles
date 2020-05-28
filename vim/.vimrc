@@ -48,13 +48,13 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-	Plug 'bling/vim-airline'
 	Plug 'chriskempson/base16-vim'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'vim-utils/vim-man'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'leafgarland/typescript-vim'
+	Plug 'bling/vim-airline'
+    Plug 'vim-utils/vim-man'
 
 call plug#end()
  
