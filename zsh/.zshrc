@@ -38,4 +38,5 @@ export PATH=$PATH:/Users/badrchoubai/Library/Python/3.7/bin/
 # aliases
 alias python=python3 
 alias pip=pip3
+alias vim=nvim
 
