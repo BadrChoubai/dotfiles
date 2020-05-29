@@ -1,16 +1,37 @@
 " =============================================================================
+" # Plugins 
+" =============================================================================
+"
+
+call plug#begin('~/.config/nvim/plugged')
+
+    Plug 'chriskempson/base16-vim'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	Plug 'junegunn/fzf.vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'leafgarland/typescript-vim'
+	Plug 'bling/vim-airline'
+    Plug 'vim-utils/vim-man'
+
+call plug#end()
+ 
+" =============================================================================
 " # Editor settings
 " =============================================================================
 "
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+colorscheme base16-monokai 
+set background=dark
+
+
 set number
 syntax on 
-
-if filereadable(expand("~/.vimrc_background"))
-	let base16colorspace=256
-	source ~/.vimrc_background
-endif
-colorscheme base16-monokai
 
 set hidden
 
@@ -35,29 +56,6 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-" =============================================================================
-" # Plugins 
-" =============================================================================
-"
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-
-	Plug 'chriskempson/base16-vim'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	Plug 'junegunn/fzf.vim'
-    Plug 'leafgarland/typescript-vim'
-	Plug 'bling/vim-airline'
-    Plug 'vim-utils/vim-man'
-
-call plug#end()
- 
 " =============================================================================
 "" # Keybinds 
 " =============================================================================
