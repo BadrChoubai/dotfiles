@@ -22,7 +22,7 @@ antigen theme robbyrussell
 # Done with Antigen
 antigen apply
 
-export PROMPT="%~ :: "
+export PROMPT="${USER} %~ :: "
 export DO_NOT_TRACK=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -39,4 +39,9 @@ export PATH=$PATH:/Users/badrchoubai/Library/Python/3.7/bin/
 alias python=python3 
 alias pip=pip3
 alias vim=nvim
+alias zshrs="exec zsh"
 
+# Folder Aliases 
+alias pj="cd ~/projects/"
+alias tut="cd ~/tutorials/"
+alias df="cd ~/dotfiles/"
