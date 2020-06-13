@@ -32,6 +32,20 @@ rmd() {
 	pandoc $1 | lynx -stdin
 }
 
+# Initialize Python Project
+pyinit() {
+    echo Setting up $1
+    mkdir $1
+    cd $1
+    touch __main__.py
+    echo "print('Hello, World!')" >> __main__.py
+    mkdir $1
+    cd $1
+    touch __init__.py
+    cd ..
+    
+}
+
 # Add Python to PATH
 export PATH=$PATH:/Users/badrchoubai/Library/Python/3.7/bin/
 
