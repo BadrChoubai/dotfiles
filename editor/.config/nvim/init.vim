@@ -1,43 +1,40 @@
 " =============================================================================
-" # Plugins 
-" =============================================================================
 "
 
 call plug#begin('~/.config/nvim/plugged')
 
-    Plug 'chriskempson/base16-vim'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
-    Plug 'morhetz/gruvbox'
     Plug 'leafgarland/typescript-vim'
 	Plug 'bling/vim-airline'
     Plug 'vim-utils/vim-man'
+    Plug 'sheerun/vim-polyglot'
+
+    Plug 'chriskempson/base16-vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'phanviet/vim-monokai-pro'
 
 call plug#end()
- 
+
 " =============================================================================
 " # Editor settings
 " =============================================================================
 "
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-
-colorscheme base16-monokai 
+set termguicolors
+colorscheme monokai_pro
 set background=dark
-
 
 set number
 set relativenumber
-syntax on 
+syntax on
 
 set hidden
 
 set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
+set updatetime=50
 set encoding=utf-8
 
 set noshowmode
@@ -58,7 +55,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 " =============================================================================
-"" # Keybinds 
+"" # Keybinds
 " =============================================================================
 "
 
@@ -75,6 +72,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>pv :wincmd h<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>pv :wincmd h<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
@@ -82,3 +80,11 @@ nnoremap <Leader>- :vertical resize -5<CR>
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+autocmd BufWritePre * :call TrimWhitespace()
