@@ -1,15 +1,20 @@
 " =============================================================================
 "
-
 call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	Plug 'junegunn/fzf.vim'
     Plug 'leafgarland/typescript-vim'
-	Plug 'bling/vim-airline'
-    Plug 'vim-utils/vim-man'
+    Plug 'bling/vim-airline'
+    Plug 'mattn/emmet-vim'
+    Plug 'posva/vim-vue'
     Plug 'sheerun/vim-polyglot'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'keith/swift.vim'
+    Plug 'vim-utils/vim-man'
+    Plug 'wakatime/vim-wakatime'
 
     Plug 'chriskempson/base16-vim'
     Plug 'morhetz/gruvbox'
