@@ -2,22 +2,24 @@
 "
 call plug#begin('~/.config/nvim/plugged')
 
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-	Plug 'junegunn/fzf.vim'
-    Plug 'leafgarland/typescript-vim'
-    Plug 'bling/vim-airline'
-    Plug 'mattn/emmet-vim'
-    Plug 'posva/vim-vue'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-surround'
-    Plug 'keith/swift.vim'
-    Plug 'vim-utils/vim-man'
-    Plug 'wakatime/vim-wakatime'
+    " Neovim lsp Plugins
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'tjdevries/nlua.nvim'
+    Plug 'tjdevries/lsp_extensions.nvim'
 
-    Plug 'chriskempson/base16-vim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'reedes/vim-pencil'
+
+    " telescope requirements...
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/telescope.nvim'
+
     Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
+    Plug 'chriskempson/base16-vim'
     Plug 'phanviet/vim-monokai-pro'
 
 call plug#end()
@@ -28,12 +30,13 @@ call plug#end()
 "
 
 set termguicolors
-colorscheme monokai_pro
+colorscheme gruvbox
 set background=dark
 
 set number
 set relativenumber
 syntax on
+autocmd! FileType c,cpp,java,php call CSyntaxAfter()
 
 set hidden
 
@@ -50,7 +53,8 @@ set nojoinspaces
 set splitright
 set splitbelow
 
-set tabstop=4 softtabstop=4
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
@@ -58,6 +62,10 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
+
+set nocompatible
+filetype plugin on
+syntax on
 
 " =============================================================================
 "" # Keybinds
@@ -92,4 +100,15 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+
 autocmd BufWritePre * :call TrimWhitespace()
+autocmd FileType rust let b:coc_root_patterns = ['Cargo.toml', '.git']
+autocmd InsertEnter,InsertLeave * set cul!
+
+lua require'nvim_lsp'.tsserver.setup{}
+

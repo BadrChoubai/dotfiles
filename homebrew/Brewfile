@@ -11,6 +11,7 @@ brew 'python3'
 brew 'stow'
 brew 'tree'
 brew 'tmux'
+brew 'neovim'
 
 # install homebrew casks
 tap 'homebrew/cask'
@@ -18,8 +19,16 @@ tap 'homebrew/cask'
 cask 'alacritty'
 cask 'docker'
 cask 'firefox'
+cask 'notion'
 cask 'paw'
+cask 'spotify'
 cask 'visual-studio-code'
+
+# Jet Brains Tools
+cask 'intellij-idea'
+cask 'pycharm'
+cask 'webstorm'
+
 
 # Ruby
 # Use [RVM](http://rvm.io/) instead of Homebrew.
