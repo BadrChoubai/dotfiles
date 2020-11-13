@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'reedes/vim-pencil'
+    Plug 'mattn/emmet-vim'
 
     " telescope requirements...
     Plug 'nvim-lua/popup.nvim'
@@ -32,6 +33,8 @@ call plug#end()
 set termguicolors
 colorscheme gruvbox
 set background=dark
+filetype plugin on
+syntax on
 
 set number
 set relativenumber
@@ -62,10 +65,7 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-
 set nocompatible
-filetype plugin on
-syntax on
 
 " =============================================================================
 "" # Keybinds
@@ -110,5 +110,22 @@ autocmd BufWritePre * :call TrimWhitespace()
 autocmd FileType rust let b:coc_root_patterns = ['Cargo.toml', '.git']
 autocmd InsertEnter,InsertLeave * set cul!
 
-lua require'nvim_lsp'.tsserver.setup{}
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+
+lua require('telescope').setup({defaults = {file_sorter = require('telescope.sorters').get_fzy_sorter}})
+
+nnoremap <leader>vd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
+nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>
+nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>
+nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>vh :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>vca :lua vim.lsp.buf.code_action()<CR>
+nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
+
+lua require'nvim_lsp'.jdtls.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.tsserver.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.jedi_language_server.setup{ on_attach=require'completion'.on_attach }
+lua require'nvim_lsp'.html.setup{ on_attach=require'completion'.on_attach }
 
