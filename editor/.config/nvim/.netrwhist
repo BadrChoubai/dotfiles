@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/badrchoubaiwork/projects/clang'
+let g:netrw_dirhist_1='/Users/Shared/SC Info'
+let g:netrw_dirhist_0='/Users/Shared'
+let g:netrw_dirhist_9='/Users/Shared/adi'
+let g:netrw_dirhist_8='/Users/badrchoubaiwork/dotfiles'
+let g:netrw_dirhist_7='/Users/badrchoubaiwork/dotfiles/editor/.config'
+let g:netrw_dirhist_6='/Users/badrchoubaiwork/dotfiles/editor'
+let g:netrw_dirhist_5='/Users/badrchoubaiwork/dotfiles'
+let g:netrw_dirhist_4='/Users/badrchoubaiwork/dotfiles/editor/.config'
+let g:netrw_dirhist_3='/Users/badrchoubaiwork/dotfiles/editor'
