@@ -1,0 +1,36 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+brew "antigen"
+brew "bat"
+brew "git"
+brew "gnupg"
+brew "neovim"
+brew "python@3.9"
+brew "stow"
+brew "tmux"
+brew "tree"
+brew "fzf"
+
+cask "alacritty"
+cask "docker"
+cask "firefox"
+cask "intellij-idea"
+cask "microsoft-teams"
+cask "notion", args: { appdir: "/Volumes/Mac SSD/Applications" }
+cask "paw"
+cask "pycharm"
+cask "spotify"
+cask "visual-studio-code"
+cask "webstorm"
+cask "zoom"
+
+# Ruby
+# Use [RVM](http://rvm.io/) instead of Homebrew.
+
+# Node
+# Use [`nvm`](https://github.com/creationix/nvm) instead of Homebrew.
+# Install manually using git clone rather than the install script:
+# https://github.com/creationix/nvm#manual-install
+

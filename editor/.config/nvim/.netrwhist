@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/badrchoubaiwork/projects/Python/algorithms'
+let g:netrw_dirhist_5='/Users/badrchoubaiwork/projects/wc-fileuploader'
+let g:netrw_dirhist_4='/Users/badrchoubaiwork/projects/JavaScript/playground/MSU/ProgramCards'
+let g:netrw_dirhist_3='/Users/badrchoubaiwork/projects/JavaScript/playground/MSU'
+let g:netrw_dirhist_2='/Users/badrchoubaiwork/projects/Python/algorithms'
+let g:netrw_dirhist_1='/Users/badrchoubaiwork/projects/wc-fileuploader'
+let g:netrw_dirhist_0='/Users/badrchoubaiwork/MLibs/Cybersecurity Center'
+let g:netrw_dirhist_9='/Users/badrchoubaiwork/Documents/SMC/Analytics/June 7, 2021'
+let g:netrw_dirhist_8='/Users/badrchoubaiwork/projects/JavaScript/playground/MSU/BrandCentral'
+let g:netrw_dirhist_7='/Users/badrchoubaiwork/Documents/SMC/_tasks'

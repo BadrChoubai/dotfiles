@@ -1,0 +1,17 @@
+{
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-14",
+        "path": "/usr/local/opt/openjdk/bin/java",
+        "default": true
+      }
+    ],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "js",
+        "json",
+        "purescript",
+        "typescript",
+        "typescriptreact",
+    ],
+}
