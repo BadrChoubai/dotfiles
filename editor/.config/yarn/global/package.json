@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@vue/cli": "^4.5.15",
-    "create-nuxt-app": "^4.0.0",
-    "create-vite": "^2.7.2"
-  }
-}

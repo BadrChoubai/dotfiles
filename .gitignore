@@ -18,3 +18,4 @@ Thumbs.db
 .gitconfig
 
 editor/.config/nvim/plugged/
+editor/.config/yarn/
