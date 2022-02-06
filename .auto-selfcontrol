@@ -1,0 +1,46 @@
+{
+    "username": "badrchoubaiwork",
+    "selfcontrol-path": "/Applications/SelfControl.app",
+    "host-blacklist": [
+        "twitter.com",
+        "reddit.com",
+        "amazon.com"
+    ],
+    "block-schedules":[
+        {
+            "weekday": 1,
+            "start-hour": 9,
+            "start-minute": 0,
+            "end-hour": 17,
+            "end-minute": 0
+        },
+        {
+            "weekday": 2,
+            "start-hour": 9,
+            "start-minute": 0,
+            "end-hour": 17,
+            "end-minute": 0
+        },
+        {
+            "weekday": 3,
+            "start-hour": 9,
+            "start-minute": 0,
+            "end-hour": 17,
+            "end-minute": 0
+        },
+        {
+            "weekday": 4,
+            "start-hour": 9,
+            "start-minute": 0,
+            "end-hour": 17,
+            "end-minute": 0
+        },
+        {
+            "weekday": 5,
+            "start-hour": 9,
+            "start-minute": 0,
+            "end-hour": 17,
+            "end-minute": 0
+        }
+    ]
+}
