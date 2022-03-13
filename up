@@ -1,0 +1,15 @@
+# !/bin/zsh
+sudo -v
+
+echo "Installing $OSTYPE config"
+
+case "$OSTYPE" in
+	darwin*)
+		brew tap Homebrew/bundle
+		brew bundle --file="$HOME/dotfiles/homebrew/Brewfile"
+	;;
+	linux-gnu)
+		zsh ./ubuntu
+	;;
+esac
+
