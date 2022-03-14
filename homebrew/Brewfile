@@ -8,27 +8,23 @@ brew "bat"
 brew "git"
 brew "gnupg"
 brew "neovim"
+brew "python@3.7"
+brew "python@3.8"
 brew "python@3.9"
+brew "nvm"
 brew "stow"
 brew "tmux"
 brew "tree"
 brew "fzf"
 
 cask "alacritty"
-cask "docker"
 cask "firefox"
 cask "microsoft-teams"
 cask "notion", args: { appdir: "/Volumes/Mac SSD/Applications" }
 cask "paw"
-cask "intellij-idea"
-cask "pycharm"
-cask "webstorm"
 cask "font-jetbrains-mono"
 cask "spotify"
 cask "visual-studio-code"
-
-# Ruby
-# Use [RVM](http://rvm.io/) instead of Homebrew.
 
 # Node
 # Use [`nvm`](https://github.com/creationix/nvm) instead of Homebrew.
