@@ -12,6 +12,10 @@ alias vim="nvim"
 alias pj="cd ~/projects/"
 alias tut="cd ~/tutorials/"
 alias df="cd ~/.dotfiles/"
+<<<<<<< HEAD
+=======
+alias vim="nvim"
+>>>>>>> 09be216c98fed81704eeb114cb65d7f38a5c0112
 
 
 # NVM
