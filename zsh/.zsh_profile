@@ -11,7 +11,8 @@ rmd() {
 # Folder Aliases 
 alias pj="cd ~/projects/"
 alias tut="cd ~/tutorials/"
-alias df="cd ~/dotfiles/"
+alias df="cd ~/.dotfiles/"
+alias vim="nvim"
 
 
 # NVM

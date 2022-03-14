@@ -12,6 +12,6 @@
         "json",
         "purescript",
         "typescript",
-        "typescriptreact",
-    ],
+        "typescriptreact"
+    ]
 }

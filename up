@@ -6,10 +6,11 @@ echo "Installing $OSTYPE config"
 case "$OSTYPE" in
 	darwin*)
 		brew tap Homebrew/bundle
-		brew bundle --file="$HOME/dotfiles/homebrew/Brewfile"
+		brew bundle --file="$HOME/.dotfiles/homebrew/Brewfile"
+		zsh $HOME/.dotfiles/darwin
 	;;
 	linux-gnu)
-		zsh ./ubuntu
+		zsh $HOME/.dotfiles/ubuntu
 	;;
 esac
 

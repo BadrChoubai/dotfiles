@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/cask-fonts"
 
 brew "antigen"
 brew "bat"
@@ -16,15 +17,15 @@ brew "fzf"
 cask "alacritty"
 cask "docker"
 cask "firefox"
-cask "intellij-idea"
 cask "microsoft-teams"
 cask "notion", args: { appdir: "/Volumes/Mac SSD/Applications" }
 cask "paw"
+cask "intellij-idea"
 cask "pycharm"
+cask "webstorm"
+cask "font-jetbrains-mono"
 cask "spotify"
 cask "visual-studio-code"
-cask "webstorm"
-cask "zoom"
 
 # Ruby
 # Use [RVM](http://rvm.io/) instead of Homebrew.
