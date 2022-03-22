@@ -2,7 +2,8 @@
 
 sudo -v
 
-if [[ -z $DOTFILES ]]; then
+if [[ -z $DOTFILES ]]; 
+then
     export DOTFILES=$HOME/.dotfiles
     export USES=$DOTFILES/uses
 fi
@@ -15,6 +16,7 @@ while test $# -gt 0; do
     case "$1" in
         "--skip-brew"|-s)
             export SKIP_BREW=1
+            echo "Skipping homebrew installation"
             shift
             ;;
         "--unstow"|-u)

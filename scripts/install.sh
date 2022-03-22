@@ -11,7 +11,7 @@ do
     then
         stow -D --target=$HOME --dir=$USES $package
     else
-        if stow -DS --target=$HOME --dir=$USES $package
+        if stow -DS --target=$HOME --dir=$USES $package;
         then
             echo "Package created for $package"
         else
