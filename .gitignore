@@ -20,6 +20,7 @@ Thumbs.db
 uses/editor/.vscode/extensions/
 uses/editor/.config/exercism/
 uses/editor/.config/coc/
+uses/editor/.config/nvim/plugged/
 
 
 
