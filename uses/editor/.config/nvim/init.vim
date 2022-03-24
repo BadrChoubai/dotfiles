@@ -6,7 +6,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-markdown'
     Plug 'sheerun/vim-polyglot'
     Plug 'mattn/emmet-vim'
+
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+    Plug 'bmeneg/coc-perl', {'do': 'yarn install && yarn build'}
+
     Plug 'vim-scripts/cSyntaxAfter'
     Plug 'reedes/vim-pencil'
 

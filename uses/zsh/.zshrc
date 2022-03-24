@@ -1,13 +1,11 @@
-# OS Dependent Loads
+#!/usr/bin/env bash
 
 case "$OSTYPE" in
 	darwin*)
-		source $(brew --prefix)/share/antigen/antigen.zsh
+		source /usr/local/share/antigen/antigen.zsh
 		antigen use oh-my-zsh
-
 		antigen bundle git
 		antigen theme robbyrussell
-
 		# Done with Antigen
 		antigen apply
 
@@ -18,8 +16,6 @@ case "$OSTYPE" in
 		export PATH=$PATH:/Users/badrchoubai/Library/Python/3.8/bin/
 		export PATH=$PATH:/Users/badrchoubai/Library/Python/3.9/bin/
 		export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-        nvm install --lts
 		;;	
     linux-gnu)
 		;;

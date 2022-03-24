@@ -17,5 +17,11 @@ Thumbs.db
 .private
 .gitconfig
 
+uses/editor/.config/exercism/
+uses/editor/.config/nvim/plugged/
+uses/editor/.config/coc/
 editor/.config/nvim/plugged/
 editor/.config/yarn/
+
+
+

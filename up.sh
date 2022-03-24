@@ -1,6 +1,4 @@
-#!/bin/zsh
-
-sudo -v
+#!/usr/bin/env bash
 
 if [[ -z $DOTFILES ]]; 
 then
@@ -14,20 +12,32 @@ fi
 
 while test $# -gt 0; do
     case "$1" in
-        "--skip-brew"|-s)
+        -s | --skip-brew)
             export SKIP_BREW=1
             echo "Skipping homebrew installation"
             shift
             ;;
-        "--unstow"|-u)
+        -u | --unstow)
             export UNSTOW=1
             echo "Unstowing all packages"
+            shift
+            ;;
+        # Use this to restow a single package;
+        -r=* | --restow-package=*)
+            export PACKAGE="${$1#*=}"
+            export RESTOW=1
+            shift
+            ;;
+        -h | --help)
+            echo "Usage function not implemented"
+            exit 1
             shift
             ;;
     esac
 done
 
 echo "Running $OSTYPE Setup Scripts";
+sudo -v;
 
 case "$OSTYPE" in
     darwin*)
@@ -39,3 +49,9 @@ case "$OSTYPE" in
         source ubuntu.sh;
     ;;
 esac
+
+echo "Installing NVM and adding it to \$PATH"
+source ./scripts/_nvm.sh;
+echo "Linking packages to root directory"
+source ./scripts/_stow.sh $STOW_FOLDERS;
+
