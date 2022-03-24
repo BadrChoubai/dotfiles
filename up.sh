@@ -50,8 +50,8 @@ case "$OSTYPE" in
     ;;
 esac
 
-echo "Installing NVM and adding it to \$PATH"
-source ./scripts/_nvm.sh;
 echo "Linking packages to root directory"
-source ./scripts/_stow.sh $STOW_FOLDERS;
+source ./scripts/_stow.sh "$STOW_FOLDERS"
+echo "Installing NVM and adding it to \$PATH";
+source ./scripts/_nvm.sh;
 
