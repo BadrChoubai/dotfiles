@@ -11,7 +11,7 @@ shell:
     - -u # force UTF-8 in tmux
 
 key_bindings:
-  - { key: N,         mods: Control,      action: SpawnNewInstance }
+  - { key: N,         mods: Command,      action: SpawnNewInstance }
 
 window:
   startup_mode: Fullscreen 

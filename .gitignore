@@ -17,6 +17,7 @@ Thumbs.db
 .private
 .gitconfig
 
+uses/editor/.vscode/extensions/
 uses/editor/.config/exercism/
 uses/editor/.config/nvim/plugged/
 uses/editor/.config/coc/
