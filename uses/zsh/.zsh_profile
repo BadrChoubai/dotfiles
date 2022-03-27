@@ -1,23 +1,10 @@
+export vim="nvim"
+ecport python="python3"
 export PROMPT="%n-%B%?%b ~ "
 export RPROMPT="%d"
 export DO_NOT_TRACK=1
 
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Read markdown in terminal
-rmd() {
-	pandoc $1 | lynx -stdin
-}
-
 # Folder Aliases 
-alias vim="nvim"
-alias python="python3"
 alias pj="cd ~/projects/"
 alias tut="cd ~/tutorials/"
 alias df="cd ~/.dotfiles/"
-
-export PROGRAM=$(which tmux)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

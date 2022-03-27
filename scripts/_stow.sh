@@ -10,11 +10,6 @@ do
    if [[ "$UNSTOW" ]];
     then
         stow -D --target="$HOME" --dir="$USES" "$package"
-    elif [[ "$RESTOW" && -d "$USES/$PACKAGE" ]];
-    then
-        package=$PACKAGE
-        stow --restow --target="$HOME" --dir="$USES" "$package"
-        echo "Package restowed: $package"
     else
         if stow -DS --target="$HOME" --dir="$USES" "$package";
         then

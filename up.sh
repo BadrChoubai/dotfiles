@@ -22,22 +22,11 @@ while test $# -gt 0; do
             echo "Unstowing all packages"
             shift
             ;;
-        # Use this to restow a single package;
-        -r=* | --restow-package=*)
-            export PACKAGE="${$1#*=}"
-            export RESTOW=1
-            shift
-            ;;
-        -h | --help)
-            echo "Usage function not implemented"
-            exit 1
-            shift
-            ;;
     esac
 done
 
 echo "Running $OSTYPE Setup Scripts";
-sudo -v;
+sudo -vy;
 
 case "$OSTYPE" in
     darwin*)
@@ -46,12 +35,10 @@ case "$OSTYPE" in
     ;;
     linux-gnu)
         # linux installation scripts
-        source ubuntu.sh;
+        source linux.sh;
     ;;
 esac
 
 echo "Linking packages to root directory"
 source ./scripts/_stow.sh "$STOW_FOLDERS"
-echo "Installing NVM and adding it to \$PATH";
-source ./scripts/_nvm.sh;
 
