@@ -2,7 +2,9 @@
     "workbench.colorTheme": "Monokai Pro",
     "workbench.iconTheme": "Monokai Pro Icons",
     "workbench.sideBar.location": "right",
-    "editor.fontSize": 17,
-    "editor.letterSpacing": 1,
-    "editor.fontFamily": "JetBrains Mono"
+    "editor.fontFamily": "'Jetbrains Mono', 'Droid Mono', 'mono'",
+    "editor.fontSize": 21,
+    "vim.vimrc.enable": false,
+    "vim.neovimUseConfigFile": true,
+    "vim.neovimConfigPath": "~/.config/nvim"
 }

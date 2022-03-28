@@ -21,6 +21,5 @@ uses/editor/.vscode/extensions/
 uses/editor/.config/nvim/plugged/
 uses/editor/.config/exercism/
 uses/editor/.config/coc/
-
-
+editor/.config/nvim/.netrwhist
 
