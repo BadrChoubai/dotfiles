@@ -1,7 +1,5 @@
 export vim="nvim"
-ecport python="python3"
-export PROMPT="%n-%B%?%b ~ "
-export RPROMPT="%d"
+export python="python3"
 export DO_NOT_TRACK=1
 
 # Folder Aliases 
