@@ -6,3 +6,4 @@ export DO_NOT_TRACK=1
 alias pj="cd ~/projects/"
 alias tut="cd ~/tutorials/"
 alias df="cd ~/.dotfiles/"
+

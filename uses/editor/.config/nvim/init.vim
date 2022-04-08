@@ -6,6 +6,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-markdown'
     Plug 'sheerun/vim-polyglot'
     Plug 'mattn/emmet-vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
     
     Plug 'vim-scripts/cSyntaxAfter'
     Plug 'reedes/vim-pencil'
