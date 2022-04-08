@@ -7,7 +7,7 @@ env:
 alt_send_esc: false
 
 shell:
-  program: /usr/bin/tmux
+  program: /usr/local/bin/tmux
   args:
     - -u # force UTF-8 in tmux
 

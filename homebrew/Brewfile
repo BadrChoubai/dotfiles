@@ -11,16 +11,15 @@ brew "neovim"
 brew "python@3.7"
 brew "python@3.8"
 brew "python@3.9"
-brew "nvm"
+brew "node"
+
 brew "stow"
 brew "tmux"
 brew "tree"
 brew "fzf"
 
 cask "alacritty"
-cask "balenaetcher"
 cask "firefox"
-cask "microsoft-teams"
 cask "notion", args: { appdir: "/Volumes/Mac SSD/Applications" }
 cask "paw"
 cask "font-jetbrains-mono"

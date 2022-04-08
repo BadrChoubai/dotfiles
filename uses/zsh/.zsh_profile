@@ -1,9 +1,11 @@
-export vim="nvim"
-export python="python3"
 export DO_NOT_TRACK=1
+precmd() { print -rP "%* %d $(git_prompt_info)" }
+export PROMPT="%(?:%{%}~ :%{%}~ )"
 
 # Folder Aliases 
 alias pj="cd ~/projects/"
 alias tut="cd ~/tutorials/"
 alias df="cd ~/.dotfiles/"
+alias vim="nvim"
+alias python="python3"
 
