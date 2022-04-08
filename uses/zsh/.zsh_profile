@@ -9,3 +9,5 @@ alias df="cd ~/.dotfiles/"
 alias vim="nvim"
 alias python="python3"
 
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/badrchoubai/.dotnet/tools"
