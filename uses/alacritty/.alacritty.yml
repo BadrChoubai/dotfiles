@@ -6,7 +6,6 @@ env:
 alt_send_esc: false
 
 shell:
-  shell:
   program: /bin/zsh
   args:
     - -l
