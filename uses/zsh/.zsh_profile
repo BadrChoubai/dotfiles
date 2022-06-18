@@ -8,6 +8,7 @@ alias tut="cd ~/tutorials/"
 alias df="cd ~/.dotfiles/"
 alias vim="nvim"
 alias python="python3"
+alias zshrs=". ~/.zshrc"
 
 # Add .NET Core SDK tools
 export PATH="$PATH:/Users/badrchoubai/.dotnet/tools"
